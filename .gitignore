@@ -1,1 +1,254 @@
 commandes-shell.md
+Lister le contenu d’un dossier : 
+
+Lister le contenu d’un dossier : ls. Lister le contenu d’un dossier sous forme de liste : ls -l. Lister le contenu d’un dossier sous forme de liste et avec les fichiers invisibles : ls -la.
+
+Afficher le chemin courant
+
+pwd affiche le chemin du dossier dans lequel on est
+
+Supprimer un fichier ou un dossier
+
+
+rm fichier.txt supprime un fichier. rm -rf nom-du-dossier supprime un dossier.
+
+
+
+Un exemple de liste et suppression avec Git
+
+Je tape ls -la dans un dossier et il m’affiche ceci :
+
+vincentcaronnet@120 premiere-page % ls -la
+total 288
+drwxr-xr-x@ 11 vincentcaronnet  staff     352  2 nov 08:09 .
+drwxr-xr-x@  4 vincentcaronnet  staff     128  2 nov 08:19 ..
+-rw-r--r--@  1 vincentcaronnet  staff    6148  2 nov 08:09 .DS_Store
+drwxr-xr-x@ 12 vincentcaronnet  staff     384  2 nov 08:09 .git
+-rw-r--r--   1 vincentcaronnet  staff     160 26 oct 11:19 .prettierrc
+drwxr-xr-x@  3 vincentcaronnet  staff      96  2 nov 08:09 .vscode
+-rw-r--r--@  1 vincentcaronnet  staff    2287 26 oct 10:05 favicon-32x32-1.png
+-rw-r--r--   1 vincentcaronnet  staff       0 26 oct 10:40 fichier-vide.txt
+-rw-r--r--   1 vincentcaronnet  staff    3835 26 oct 16:18 index.html
+-rw-r--r--   1 vincentcaronnet  staff     881 26 oct 13:36 page-ideale.pug
+-rw-r--r--@  1 vincentcaronnet  staff  120416 26 oct 11:48 template-jdg9-2.jpg
+
+vincentcaronnet@120
+
+
+Je supprime le dépôt Git avec rm -rf .git :
+
+
+
+
+
+vincentcaronnet@120 premiere-page % rm -rf .git
+
+vincentcaronnet@120
+
+
+Quand je refais ls -la, je constate que le dossier .git a bien été supprimé, ce qui signifie que je n’ai plus de dépôt Git :
+
+
+
+
+
+vincentcaronnet@120 premiere-page % ls -la
+
+total 296
+
+drwxr-xr-x@ 11 vincentcaronnet  staff     352  2 nov 08:45 .
+
+drwxr-xr-x@  4 vincentcaronnet  staff     128  2 nov 08:45 ..
+
+-rw-r--r--@  1 vincentcaronnet  staff    6148  2 nov 08:09 .DS_Store
+
+-rw-r--r--   1 vincentcaronnet  staff     160 26 oct 11:19 .prettierrc
+
+drwxr-xr-x@  3 vincentcaronnet  staff      96  2 nov 08:09 .vscode
+
+-rw-r--r--   1 vincentcaronnet  staff     467  2 nov 08:45 211102_commandes-shell.md
+
+-rw-r--r--@  1 vincentcaronnet  staff    2287 26 oct 10:05 favicon-32x32-1.png
+
+-rw-r--r--   1 vincentcaronnet  staff       0 26 oct 10:40 fichier-vide.txt
+
+-rw-r--r--   1 vincentcaronnet  staff    3835 26 oct 16:18 index.html
+
+-rw-r--r--   1 vincentcaronnet  staff     881 26 oct 13:36 page-ideale.pug
+
+-rw-r--r--@  1 vincentcaronnet  staff  120416 26 oct 11:48 template-jdg9-2.jpg
+
+vincentcaronnet@120
+
+
+Initialiser un dépôt Git
+
+
+J’initialise un dépôt Git avec git init :
+
+
+
+
+
+vincentcaronnet@120 premiere-page % git init
+
+hint: Using 'master' as the name for the initial branch. This default branch name
+
+hint: is subject to change. To configure the initial branch name to use in all
+
+hint: of your new repositories, which will suppress this warning, call:
+
+hint:
+
+hint:   git config --global init.defaultBranch <name>
+
+hint:
+
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+
+hint: 'development'. The just-created branch can be renamed via this command:
+
+hint:
+
+hint:   git branch -m <name>
+
+Initialized empty Git repository in /Users/vincentcaronnet/Documents/Formation/Centres/GroupeMJM/Webstart/2021-2022/cours-webstart-21/211102_dev1/premiere-page/.git/
+
+vincentcaronnet@120 premiere-page %
+
+
+Un dossier .git a bien été créé :
+
+
+
+
+
+vincentcaronnet@120 premiere-page % ls -la
+
+total 296
+
+drwxr-xr-x@ 12 vincentcaronnet  staff     384  2 nov 08:55 .
+
+drwxr-xr-x@  4 vincentcaronnet  staff     128  2 nov 08:55 ..
+
+-rw-r--r--@  1 vincentcaronnet  staff    6148  2 nov 08:09 .DS_Store
+
+drwxr-xr-x@  9 vincentcaronnet  staff     288  2 nov 08:54 .git
+
+-rw-r--r--   1 vincentcaronnet  staff     160 26 oct 11:19 .prettierrc
+
+drwxr-xr-x@  3 vincentcaronnet  staff      96  2 nov 08:09 .vscode
+
+-rw-r--r--   1 vincentcaronnet  staff    3388  2 nov 08:55 211102_commandes-shell.md
+
+-rw-r--r--@  1 vincentcaronnet  staff    2287 26 oct 10:05 favicon-32x32-1.png
+
+-rw-r--r--   1 vincentcaronnet  staff       0 26 oct 10:40 fichier-vide.txt
+
+-rw-r--r--   1 vincentcaronnet  staff    3835 26 oct 16:18 index.html
+
+-rw-r--r--   1 vincentcaronnet  staff     881 26 oct 13:36 page-ideale.pug
+
+-rw-r--r--@  1 vincentcaronnet  staff  120416 26 oct 11:48 template-jdg9-2.jpg
+
+vincentcaronnet@120 premiere-page %
+
+
+Demander à Git d’ignorer certains fichier
+
+
+Je crée le fichier .gitignore avec la commande touch .gitignore :
+
+
+
+
+
+vincentcaronnet@120 premiere-page % touch .gitignore
+
+vincentcaronnet@120 premiere-page %
+
+
+Rentrer dans le .gitignore les noms des fichiers et des dossier à ignorer :
+
+
+
+
+
+.DS_Store
+
+.vscode
+
+.prettierrc
+
+211102_commandes-shell.md
+
+fichier-vide.txt
+
+page-ideale.pug
+
+
+
+Le site <gitignore.io> génère le contenu des .gitignore à taper en fonction du langage de notre projet.
+
+
+
+
+Faire un commit
+
+
+Avec la commande git add . j’ajoute tous les fichiers au commit :
+
+
+
+
+
+vincentcaronnet@120 premiere-page % git add .
+
+vincentcaronnet@120 premiere-page %
+
+
+Avec la commande git commit -am "Écrire ici message descriptif", je lance le commit en lui associant un message :
+
+
+
+
+
+vincentcaronnet@120 premiere-page % git commit -am "Premier commit"
+
+[master (root-commit) 0ce9b7a] Premier commit
+
+ 4 files changed, 74 insertions(+)
+
+ create mode 100644 .gitignore
+
+ create mode 100644 favicon-32x32-1.png
+
+ create mode 100644 index.html
+
+ create mode 100644 template-jdg9-2.jpg
+
+vincentcaronnet@120 premiere-page %
+
+
+Le commit a été fait sur la branche master
+
+
+
+Les branches Git
+
+
+Pour savoir sur quelle branche, je tape la commande git branch :
+
+
+
+
+
+vincentcaronnet@120 premiere-page % git branch
+
+* master
+
+vincentcaronnet@120 premiere-page %
+
+
+L’étoile devant le nom de la branche indique la branche courante.
+
