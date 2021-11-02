@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="stylesheet" ref="premiere-page-style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Fondation, un empire qui va bientôt s'éffondrer</title>
     <!-- Raccourcie pour commentaire: ( cmd shift : ) sur mac  -->
     <meta
@@ -17,62 +25,88 @@
     <!-- pour creer un balises rapide (alt w) -->
     <header>
       <h1>Fondation,<br />la nouvelle série sur AppleTV</h1>
-      <nav>
+
+      <img src="foundation.jpeg" alt="Affiche de la série Foundation" />
+      <nav class="nav">
         <ul>
-          <li><a href="#Synopsis">synopsis</a></li>
-          <li><a href="#Distribution">distribution</a></li>
-          <li><a href="#savoir-plus">savoir-plus</a></li>
+          <br />
+          <li class="col"><a href="#Synopsis">Synopsis</a></li>
+          <br />
+          <li class="col"><a href="#Distribution">Distribution</a></li>
+          <br />
+          <li class="col"><a href="#savoir-plus">En savoir plus</a></li>
+          <br />
         </ul>
       </nav>
-      <img src="foundation.jpeg" alt="Affiche de la série Foundation" />
     </header>
 
     <main>
       <section id="synopsis">
         <h2>Synopsis</h2>
+        <br />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
-          impedit, porro quo minima ipsam incidunt corrupti dicta nostrum
-          voluptate rem eum corporis ex pariatur tempore culpa non consequuntur
-          inventore harum.
+          <em>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
+            impedit, porro quo minima ipsam incidunt corrupti dicta nostrum
+            voluptate rem eum corporis ex pariatur tempore culpa non
+            consequuntur inventore harum.
+          </em>
         </p>
       </section>
       <section id="Distribution">
         <h2>Distribution</h2>
+        <br />
+
         <!-- ( ul ) liste a puce ( li ) fait des points ( ol ) chiffres -->
         <!-- seletionner plusieurs lignes + ( alt w ) pour automatiquement m'être la même proprété  -->
         <ul>
-          <li>
-            Jared Harris (VF : Yann Guillemot) : Hari Seldon, psychohistorien
-          </li>
-          <li>
-            Lee Pace (VF : Anatole de Bodinat) : Frère au Grand Jour, Empereur
-            de la Galaxie
-          </li>
-          <li>
-            Lou Llobell (VF : Léopoldine Serre) : Gaal Dornick, mathématicienne,
-            narratrice de la série
-          </li>
-          <li>
-            Leah Harvey (en) (VF : Déborah Claude) : Salvor Hardin, gardienne de
-            Terminus
-          </li>
-          <li>
-            Laura Birn (VF : Marie Diot) : Eto Demerzel, robot humanoïde,
-            conseillère de l'empereur
-          </li>
-          <li>
-            Terrence Mann (VF : Philippe Catoire) : Frère au Soir / Frère à la
-            Nuit (empereur âgé / mourant)
-          </li>
-          <li>
-            Cassian Bilton (VF : Gabriel Bismuth-Bienaimé) : Frère à l'Aurore
-            (empereur jeune)
-          </li>
+          <em>
+            <li>
+              Jared Harris (VF : Yann Guillemot) : Hari Seldon, psychohistorien
+            </li>
+            <br />
+            <li>
+              Lee Pace (VF : Anatole de Bodinat) : Frère au Grand Jour, Empereur
+              de la Galaxie
+            </li>
+            <br />
+
+            <li>
+              Lou Llobell (VF : Léopoldine Serre) : Gaal Dornick,
+              mathématicienne, narratrice de la série
+            </li>
+            <br />
+
+            <li>
+              Leah Harvey (en) (VF : Déborah Claude) : Salvor Hardin, gardienne
+              de Terminus
+            </li>
+            <br />
+
+            <li>
+              Laura Birn (VF : Marie Diot) : Eto Demerzel, robot humanoïde,
+              conseillère de l'empereur
+            </li>
+            <br />
+
+            <li>
+              Terrence Mann (VF : Philippe Catoire) : Frère au Soir / Frère à la
+              Nuit (empereur âgé / mourant)
+            </li>
+            <br />
+
+            <li>
+              Cassian Bilton (VF : Gabriel Bismuth-Bienaimé) : Frère à l'Aurore
+              (empereur jeune)
+            </li>
+            <br />
+          </em>
         </ul>
       </section>
-      <section id="savoir-plus">
-        <h2>Pour en savoir plus</h2>
+      <section id="Ensavoirplus">
+        <h2>En savoir plus</h2>
+        <br />
+
         <!-- ( ul>li*3 ) multiplie par 3 le nombre de li -->
         <ul>
           <li>
@@ -82,6 +116,8 @@
               >Liste des épisodes</a
             >
           </li>
+          <br />
+
           <li>
             <a
               href="https://tv.apple.com/fr/episode/the-emperors-peace/umc.cmc.74vnbednu4gmixy6d5imxxqs5?action=playSmartEpisode"
@@ -89,6 +125,8 @@
               >La série sur AppleTV
             </a>
           </li>
+          <br />
+
           <li>
             <a
               href="https://www.premiere.fr/Series/News-Series/Fondation-que-vaut-lenorme-serie-SF-dApple-TV--critique"
@@ -97,6 +135,7 @@
             >
             <!-- les liens permettant de ce rediriger sur une autre pages est ( target="_blank") à m'être dans une balise -->
           </li>
+          <br />
         </ul>
       </section>
     </main>
